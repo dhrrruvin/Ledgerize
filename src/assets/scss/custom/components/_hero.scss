@@ -1,0 +1,146 @@
+
+// title
+
+.hero-title {
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: $font-weight-semibold;
+
+    @media (max-width: 768px) {
+        font-size: 2.6rem;
+        line-height: 1.1;
+    }
+    @media (max-width: 576px) {
+        font-size: 2rem !important;
+    }
+}
+
+.hero-desc {
+    text-align: justify;
+}
+
+// hero
+.hero {
+
+    .shape1 {
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        width: 7rem;
+        height: 7rem;
+        background: url('/assets/images/shapes/rounded-square.svg');
+    }
+
+    .shape2 {
+        position: absolute;
+        top: 40%;
+        right: 10%;
+        width: 7rem;
+        height: 7rem;
+        background: url('/assets/images/shapes/rounded-square2.svg');
+    }
+
+    .shape3 {
+        position: absolute;
+        top: 5%;
+        right: 50%;
+        width: 7rem;
+        height: 7rem;
+        background: url('/assets/images/shapes/rounded-square2.svg');
+    }
+
+    .img-container {
+        position: relative;
+
+        img {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+// moving objects
+.hero-with-shapes {
+    @keyframes rotating {
+        0%{
+            transform: rotate(0deg);
+            top: 10%;
+            left: 5%;
+        }
+        100%{
+            transform: rotate(360deg);
+            top: 60%;
+            left: 15%;
+        }
+    }
+
+    @keyframes rotating2 {
+        0%{
+            transform: rotate(0deg);
+            bottom: 10%;
+            right: 10%;
+        }
+        100%{
+            transform: rotate(360deg);
+            bottom: 80%;
+            right: 30%;
+        }
+    }
+
+    @keyframes rotating3 {
+        0%{
+            transform: rotate(0deg);
+            bottom: 0%;
+            right: 65%;
+        }
+        100%{
+            transform: rotate(360deg);
+            bottom: 50%;
+            right: 35%;
+        }
+    }
+
+    .shape1 {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 7rem;
+        height: 7rem;
+        background: url('/assets/images/shapes/rounded-square.svg');
+        animation: rotating alternate ease-in-out infinite 6s;
+    }
+
+    .shape2 {
+        position: absolute;
+        bottom: 20%;
+        right: 10%;
+        width: 7rem;
+        height: 7rem;
+        background: url('/assets/images/shapes/rounded-square2.svg');
+        animation: rotating2 alternate ease-in-out infinite 6s;
+    }
+
+    .shape3 {
+        position: absolute;
+        bottom: 0%;
+        right: 65%;
+        width: 7rem;
+        height: 7rem;
+        background: url('/assets/images/shapes/rounded-square2.svg');
+        animation: rotating3 alternate ease-in-out infinite 6s;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        .img-container {
+            margin-top: 1rem;
+
+            &::before {
+                left: 0;
+                top: 0;
+                height: 100%;
+            }
+        }
+    }
+}

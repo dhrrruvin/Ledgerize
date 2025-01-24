@@ -1,0 +1,16 @@
+.header {
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        bottom: 0;
+        background: linear-gradient(rgba($primary, 0.075) 0%, rgba($primary, 0.1) 100%) no-repeat left center;
+    }
+}

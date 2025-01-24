@@ -1,0 +1,59 @@
+// 
+// theme.scss
+// 
+
+// fonts
+@import "custom/fonts";
+
+// core files
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "skins/default/variables";
+@import "skins/default/custom-variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// general
+@import "./custom/geneal";
+
+// structure
+@import "./custom/components/structure/sidenav";
+
+// components
+@import "components/accordions";
+@import "components/alerts";
+@import "components/backgrounds";
+@import "components/badge";
+@import "components/breadcrumb";
+@import "components/buttons";
+@import "components/card";
+@import "components/custom-checkbox";
+@import "components/custom-radio";
+@import "components/dropdown";
+@import "components/forms";
+@import "components/helper";
+@import "components/list";
+@import "components/modal";
+@import "components/nav";
+@import "components/navbar";
+@import "components/pagination";
+@import "components/popover";
+@import "components/preloader";
+@import "components/print";
+@import "components/progress";
+@import "components/reboot";
+@import "components/tables";
+@import "components/type";
+@import "components/widgets";
+
+// theme components
+@import "custom/components/avatar";
+@import "custom/components/hero";
+@import "custom/components/about";
+@import "custom/components/testimonials";
+@import "custom/components/services";
+@import "custom/components/icons";
+@import "custom/components/header";
+@import "custom/components/ribbon";
+@import "custom/components/emiCalculator";
+@import "custom/components/recharts";
+@import "custom/components/resources";
