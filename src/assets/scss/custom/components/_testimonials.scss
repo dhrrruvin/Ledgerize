@@ -1,0 +1,58 @@
+.testimonial {
+    .slider {
+        position: relative;
+        .swiper-slide {
+            .img-author {
+                max-height: 300px;
+            }
+        }
+        &::before {
+            content: "";
+            background: url('/assets/images/pattern/dot5.svg');
+            width: 5rem;
+            height: 5rem;
+            position: absolute;
+            bottom: -2.25rem;
+            left: -2.25rem;
+            z-index: 0;
+        }
+        &::after {
+            content: "";
+            background: url('/assets/images/pattern/dot5.svg');
+            width: 5rem;
+            height: 5rem;
+            position: absolute;
+            top: -2.25rem;
+            right: -2.25rem;
+            z-index: 0;
+        }
+        .testimonial-body {
+            padding: 2rem;
+        }
+        .quotation-mark {
+            font-weight: 700;
+            font-size: 6rem;
+            font-family: "Times New Roman", Georgia, Serif;
+            line-height: 0.7;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        .slider {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.testimonial {
+    .slider {
+        &::before,
+        &::after {
+            background: none;
+        }
+    }
+}
