@@ -26,6 +26,9 @@ interface FormData {
 
 const ContactUs = ({ ref }: ContactUsProps) => {
 
+     const [comapnyMailLoading, setCompanyMailSending] = useState(false);
+     const [userMailLoading, setUserMailSending] = useState(false);
+     
      const [formData, setFormData] = useState<FormData>({
           name: '',
           contactNumber: '',
@@ -50,8 +53,8 @@ const ContactUs = ({ ref }: ContactUsProps) => {
           setFormData({ ...formData, [name]: value });
           const form = event.currentTarget
           form.setCustomValidity('')
-          if(form.checkValidity() === false) {
-               if(form.validity.patternMismatch) {
+          if (form.checkValidity() === false) {
+               if (form.validity.patternMismatch) {
                     form.setCustomValidity('Please fill in this field.')
                }
           }
@@ -60,6 +63,8 @@ const ContactUs = ({ ref }: ContactUsProps) => {
 
      const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
           event.preventDefault();
+          setCompanyMailSending(true)
+          setUserMailSending(true)
 
           const customerTemplateParams = {
                to_name: formData.name,
@@ -78,7 +83,12 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                (err) => {
                     console.log('FAILED...', err);
                }
-          );
+          ).catch((error) => {
+               console.error("Error: ", error)
+          })
+          .finally(() => {
+               setUserMailSending(false)
+          });
 
           const companyTemplateParams = {
                contact: formData.contactNumber,
@@ -98,7 +108,9 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                     console.log('SUCCESS!', response.status, response.text);
                })
                .catch((err) => {
-                    console.log('FAILED...', err);
+                    console.error('Error: ', err);
+               }).finally(() => {
+                    setCompanyMailSending(false)
                })
      };
 
@@ -132,7 +144,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                                   to="#"
                                                   onClick={() => (window.location.href = 'mailto:ledgerize@domain.com')}
                                              >
-                                                  ledgerize@domain.com
+                                                  info@accledgwise.com
                                              </Link>
                                         </h4>
                                    </div>
@@ -161,7 +173,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                    </ul>
                               </Col>
                               <Col lg={6} data-aos="fade-left" data-aos-duration="900">
-                                   <Form onSubmit={handleSubmit}>
+                                   <Form onSubmit={handleSubmit} autoComplete="off">
                                         <Row>
                                              <Col lg={6}>
                                                   <FormInput
@@ -174,6 +186,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                                        containerClass={'mb-3'}
                                                        required
                                                        pattern=".*\S.*"
+                                                       autoComplete="off"
                                                   />
                                              </Col>
                                              <Col lg={6}>
@@ -187,6 +200,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                                        containerClass={'mb-3'}
                                                        required
                                                        pattern=".*\S.*"
+                                                       autoComplete="off"
                                                   />
                                              </Col>
                                         </Row>
@@ -201,6 +215,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                                        onChange={handleInputChange}
                                                        containerClass={'mb-3'}
                                                        required
+                                                       autoComplete="off"
                                                   />
                                              </Col>
                                              <Col lg={6}>
@@ -208,6 +223,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                                        value={formData.serviceType}
                                                        onChange={handleSelect}
                                                        defaultValue={''}
+                                                       className='mb-3'
                                                   >
                                                        <option value={''}>Nature of work</option>
                                                        {
@@ -228,6 +244,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                                        value={formData.websiteCompanyName}
                                                        onChange={handleInputChange}
                                                        containerClass={'mb-3'}
+                                                       autoComplete="off"
                                                   />
                                              </Col>
                                         </Row>
@@ -246,7 +263,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                              </Col>
                                         </Row>
                                         <div className="mb-0 text-end">
-                                             <Button variant="primary" type="submit">
+                                             <Button variant="primary" type="submit" disabled={comapnyMailLoading || userMailLoading}>
                                                   Submit
                                              </Button>
                                         </div>

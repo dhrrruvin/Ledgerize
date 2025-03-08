@@ -1,20 +1,36 @@
 .service {
-     .service-item {
-          background-color: $primary;
-          height: 25vh;
-          border-radius: $border-radius-lg;
-          display: block;
-          text-decoration: none;
-          z-index: 0;
-          overflow: hidden;
-          position: relative;
-          top: 0;
-          
-          &:hover {
-               box-shadow: $box-shadow-lg !important;
-               transition: all 0.25s ease-out;
-               top: -5px;
-               border: 1px solid $primary !important;
-          }
-     }
+    .service-item {
+        background-color: $primary;
+        height: 25vh; // Default height
+        border-radius: $border-radius-lg;
+        display: block;
+        text-decoration: none;
+        z-index: 0;
+        overflow: hidden;
+        position: relative;
+        top: 0;
+
+        &:hover {
+            box-shadow: $box-shadow-lg !important;
+            transition: all 0.25s ease-out;
+            top: -5px;
+            border: 1px solid $primary !important;
+        }
+    }
+}
+
+@media (max-width: 768px) { // For iPad and mobile
+    .service {
+        .service-item {
+            height: 18vh; //djust this value as needed for iPad
+        }
+    }
+}
+
+@media (max-width: 480px) { // For mobile view
+    .service {
+        .service-item {
+            height: 18vh; //Adjust this value as needed for mobile
+        }
+    }
 }

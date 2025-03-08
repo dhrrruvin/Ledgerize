@@ -8,7 +8,7 @@ interface SoftwareSpecializationProps {
 }
 const SoftwareSpecialization = ({ softwareSpecializationsData }: SoftwareSpecializationProps) => {
      return (
-          <section className="py-6">
+          <section id="softwareSpecialization" className="py-6 px-3">
                <Container className="bg-soft-white border p-5 rounded-lg" data-aos="fade-up" data-aos-duration="700">
                     <h4 className="display-5 fw-medium mb-2">Software Specialization</h4>
                     <Row className="align-items-center">
@@ -16,7 +16,7 @@ const SoftwareSpecialization = ({ softwareSpecializationsData }: SoftwareSpecial
                               <ul className="list-inline mb-0 mt-4">
                                    {softwareSpecializationsData.map((softwareSpecialization, index) => {
                                         return (
-                                             <li className="list-inline-item text-center me-3 me-sm-5" key={index.toString()}>
+                                             <li className="list-inline-item text-center" key={index.toString()}>
                                                   <span className="icon icon-sm text-secondary">
                                                        <img src={softwareSpecialization.softwareIcon} alt="" width={50} height={50} />
                                                   </span>

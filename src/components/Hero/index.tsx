@@ -10,25 +10,21 @@ const Hero = () => {
                <div className="shape1"></div>
                <div className="shape2"></div>
                <div className="shape3"></div>
-               <Container className="">
-                    <Row>
-                         <Col lg={5}>
-                              <div
-                                   className="img-container text-center text-lg-end"
-                                   data-aos="fade-up"
-                                   data-aos-duration="500"
-                              >
-                                   <img src={hero} alt="Hero" className="img-fluid" />
-                              </div>
+               <Container>
+                    <Row className="align-items-center row-cols-1 row-cols-md-2 justify-content-center justify-content-md-start mx-sm-2">
+                         <Col lg={5} md={4} xs={12} className="mb-4 mb-md-0 text-center text-md-start px-sm-5" style={{ display: 'flex', alignItems: 'center' }}>
+                              <img src={hero} alt="Hero" className="img-fluid hero-image" />
                          </Col>
                          <Col
                               lg={{ offset: 1, span: 6 }}
+                              md={8}
+                              sm={12}
                               data-aos="fade-left"
                               data-aos-duration="2000"
-                              className="mt-7"
+                              // className="mt-7"
                          >
                               <h1 className="hero-title text-center">
-                                   Ledgerize
+                                   Accledgerize
                               </h1>
                               <p className="hero-desc mt-3 fs-24 text-secondary">
                                    <i>
@@ -38,7 +34,7 @@ const Hero = () => {
 
                               <div className="pt-3 pt-sm-5 text-center">
                                    <Link to="/home/contactus" className="btn btn-primary me-2" data-toggle="smooth-scroll">
-                                        <span className="me-2">Get Started with Ledgerize</span>
+                                        <span className="me-2">Get Started with Accledgerize</span>
                                    </Link>
                               </div>
                          </Col>

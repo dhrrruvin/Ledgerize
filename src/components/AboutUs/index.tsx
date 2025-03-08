@@ -21,8 +21,8 @@ const AboutUs = ({ whyLedgerizesData, coreValuesData, ref }: LedgerizeProps) => 
                <section id="aboutUs" ref={ref} className="position-relative overflow-hidden py-6 features-3">
                     <Container>
                          <Row className="">
-                              <Col>
-                                   <div className="mb-lg-0 mb-4" data-aos="fade-up" data-aos-duration="800">
+                              <Col md={12}>
+                                   <div className="mb-lg-0 mb-4" data-aos="fade-up" data-aos-duration="200">
                                         <Badge pill bg="" className="badge-soft-danger px-2 py-1">
                                              About Us
                                         </Badge>
@@ -72,6 +72,16 @@ const AboutUs = ({ whyLedgerizesData, coreValuesData, ref }: LedgerizeProps) => 
                                         <h5 className="fw-normal text-muted mx-auto mt-0 mb-4 pb-3">
                                              Choosing Ledgerize means choosing a partner committed to your financial success.
                                         </h5>
+                                        <Row className="d-block d-lg-none">
+                                             <Col className="px-2 px-xs-6 px-sm-6 px-md-10">
+                                                  <img
+                                                       src={whyLedgerize}
+                                                       alt="desktop1"
+                                                       data-aos="fade-left"
+                                                       data-aos-duration="700"
+                                                  />
+                                             </Col>
+                                        </Row>
                                         <Row className="mt-5">
                                              {(whyLedgerizesData || []).map((whyLedgerize, index) => {
                                                   return (
@@ -94,7 +104,7 @@ const AboutUs = ({ whyLedgerizesData, coreValuesData, ref }: LedgerizeProps) => 
                                         </Row>
                                    </div>
                               </Col>
-                              <Col lg={{ span: 5, offset: 1 }}>
+                              <Col lg={{ span: 5, offset: 1 }} className="d-none d-lg-block">
                                    <img
                                         src={whyLedgerize}
                                         alt="desktop1"
@@ -110,7 +120,7 @@ const AboutUs = ({ whyLedgerizesData, coreValuesData, ref }: LedgerizeProps) => 
                <section className="position-relative overflow-hidden py-6 features-3">
                     <Container>
                          <Row className="">
-                              <Col lg={5}>
+                              <Col lg={5} className="d-none d-lg-block">
                                    <img
                                         src={coreValue}
                                         alt="desktop1"
@@ -124,6 +134,16 @@ const AboutUs = ({ whyLedgerizesData, coreValuesData, ref }: LedgerizeProps) => 
                                         <h5 className="fw-normal text-muted mx-auto mt-0 mb-4 pb-3">
                                              our core values define who we are and how we serve our clients
                                         </h5>
+                                        <Row className="d-block d-lg-none">
+                                             <Col className="px-2 px-xs-6 px-sm-6 px-md-10">
+                                                  <img
+                                                       src={coreValue}
+                                                       alt="desktop1"
+                                                       data-aos="fade-left"
+                                                       data-aos-duration="700"
+                                                  />
+                                             </Col>
+                                        </Row>
                                         <Row className="mt-5">
                                              {(coreValuesData || []).map((coreValue, index) => {
                                                   return (

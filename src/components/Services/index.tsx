@@ -21,7 +21,7 @@ const Services = ({ servicesData, ref }: ServicesProps) => {
                     <Row className="pt-5 service">
                          {(servicesData || []).map((service, index) => {
                               return (
-                                   <Col md={4} key={index.toString()}>
+                                   <Col lg={4} md={6} key={index.toString()}>
                                         <Card
                                              className="border-0 shadow-none service-item"
                                              data-aos="fade-up"

@@ -3,42 +3,52 @@
 //
 // Bootstrap override - navbar
 .navbar {
-    padding: 0;
+
+    // padding: 0;
     .navbar-nav {
         .nav-link {
             cursor: pointer;
             font-weight: $font-weight-medium;
             font-size: 0.9375rem;
+
             [class^="icon-"] {
                 color: $link-color;
-                > svg [fill]:not([fill="none"]) {
+
+                >svg [fill]:not([fill="none"]) {
                     fill: $link-color;
                 }
             }
+
             &.active {
                 color: $link-hover-color !important;
+
                 [class^="icon-"] {
                     color: $link-hover-color;
-                    > svg [fill]:not([fill="none"]) {
+
+                    >svg [fill]:not([fill="none"]) {
                         fill: $link-hover-color;
                     }
                 }
             }
+
             &:hover {
                 [class^="icon-"] {
                     color: $link-hover-color;
-                    > svg [fill]:not([fill="none"]) {
+
+                    >svg [fill]:not([fill="none"]) {
                         fill: $link-hover-color;
                     }
                 }
             }
         }
     }
+
     &.topnav-menu {
         height: 70px;
+
         .navbar-nav {
-            & > .nav-item {
-                > .nav-link {
+            &>.nav-item {
+                >.nav-link {
                     padding: 0 $nav-link-padding-x;
                     display: block;
                     line-height: 70px;
@@ -47,6 +57,7 @@
             }
         }
     }
+
     &.navbar-sticky {
         transition: $transition-base;
         box-shadow: $box-shadow;
@@ -57,11 +68,13 @@
         top: 0;
     }
 }
+
 .navbar-light {
     .logo {
         .logo-dark {
             display: inline-block;
         }
+
         .logo-light {
             display: none;
         }
@@ -73,6 +86,7 @@
         .logo-dark {
             display: none;
         }
+
         .logo-light {
             display: inline-block;
         }
@@ -94,6 +108,7 @@
     padding-top: 0;
     padding-bottom: 0;
     box-shadow: none;
+
     @include media-breakpoint-up(lg) {
         left: 50%;
         min-width: $navbar-dropdown-min-width;
@@ -105,12 +120,15 @@
         transition: $transition-base;
         transition-property: opacity, visibility, transform, -webkit-transform;
         transform-origin: top center;
+
         &.dropdown-menu-lg {
             min-width: $navbar-dropdown-min-width-lg;
         }
+
         &.dropdown-menu-xl {
             min-width: $navbar-dropdown-min-width-xl;
         }
+
         .nav {
             .nav-item {
                 &.dropdown {
@@ -124,8 +142,10 @@
             }
         }
     }
+
     .nav {
         display: block;
+
         .nav-item {
             .nav-link {
                 padding: 0.25rem 0.75rem;
@@ -133,12 +153,14 @@
                 margin: 0 0.5rem;
                 position: relative;
             }
+
             &.dropdown {
                 &:hover {
-                    > .dropdown-menu.show {
+                    >.dropdown-menu.show {
                         display: block;
                     }
                 }
+
                 .arrow {
                     &::after {
                         right: 22px;
@@ -149,8 +171,10 @@
             }
         }
     }
+
     .arrow {
         display: inline-block;
+
         &:after {
             border-color: initial;
             border-style: solid;
@@ -180,6 +204,7 @@
         z-index: $zindex-fixed;
         display: block;
     }
+
     .navbar-nav {
         .dropdown {
             &:hover {
@@ -187,6 +212,7 @@
                     opacity: 1;
                     transform: translate3d(-50%, 1px, 0);
                     visibility: visible;
+
                     .dropdown {
                         &:hover {
                             .dropdown-menu {
@@ -209,6 +235,7 @@
             color: $navbar-dark-brand-color;
         }
     }
+
     .dropdown-menu {
         .nav-link {
             color: $body-color !important;
@@ -230,6 +257,7 @@
         left: 0;
         right: 0;
         z-index: 1001;
+
         .dropdown {
             .dropdown-menu {
                 &.dropdown-menu-lg {
@@ -237,15 +265,18 @@
                 }
             }
         }
+
         &.navbar-dark {
             .logo {
                 .logo-dark {
                     display: inline-block;
                 }
+
                 .logo-light {
                     display: none;
                 }
             }
+
             .navbar-toggler {
                 color: $navbar-light-color;
                 border-color: $navbar-light-toggler-border-color;
@@ -255,28 +286,32 @@
                 background-image: escape-svg($navbar-light-toggler-icon-bg);
             }
         }
+
         .navbar-nav {
-            > .nav-item {
-                > .nav-link {
+            >.nav-item {
+                >.nav-link {
                     line-height: inherit;
                     padding: 0.5rem 1em;
                     color: $nav-link-color;
+
                     .feather {
                         float: right;
                     }
                 }
+
                 .btn.btn-white.text-white {
                     color: $dark !important;
                 }
             }
-            > .dropdown {
+
+            >.dropdown {
                 .dropdown-menu {
                     .nav {
                         .dropdown {
                             .dropdown-menu {
                                 .nav {
                                     .nav-item {
-                                        > .nav-link {
+                                        >.nav-link {
                                             margin: 0 0.5rem 0 1.2rem;
                                         }
                                     }
@@ -296,8 +331,24 @@
             }
         }
     }
+
     .navbar-collapse {
         max-height: 480px;
         overflow-y: auto;
+    }
+}
+
+.navbar-collapse {
+    flex-grow: unset;
+}
+
+.navbar .navbar-nav .nav-link {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+@include media-breakpoint-up(lg) {
+    .navbar-expand-lg {
+        justify-content: space-between;
     }
 }

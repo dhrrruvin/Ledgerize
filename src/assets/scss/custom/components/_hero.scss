@@ -144,3 +144,15 @@
         }
     }
 }
+
+@include media-breakpoint-down(sm) {
+    .hero img {
+        margin-inline: 2rem;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .container {
+        max-width: unset;
+    }
+}
