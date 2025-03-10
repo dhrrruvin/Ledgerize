@@ -126,7 +126,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
 
      return (
           <>
-               <section ref={ref} id="contactus" className="section pt-lg-8 pb-lg-4 pt-4 pb-3 position-relative">
+               <section ref={ref} id="contactus" className="section pt-lg-7 pb-lg-4 pt-4 pb-3 position-relative">
                     <Container className="testimonial">
                          <Row className="align-items-center">
                               <Col lg={6} data-aos="fade-right" data-aos-duration="600">
@@ -172,7 +172,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                         </li> */}
                                    </ul>
                               </Col>
-                              <Col lg={6} data-aos="fade-left" data-aos-duration="900">
+                              <Col lg={6} data-aos="fade-left" data-aos-duration="900" className="p-0">
                                    <Form onSubmit={handleSubmit} autoComplete="off">
                                         <Row>
                                              <Col lg={6}>
@@ -262,7 +262,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                                   />
                                              </Col>
                                         </Row>
-                                        <div className="mb-0 text-end">
+                                        <div className="mb-0 text-end" style={{ paddingInline: '12px' }}>
                                              <Button variant="primary" type="submit" disabled={comapnyMailLoading || userMailLoading}>
                                                   Submit
                                              </Button>

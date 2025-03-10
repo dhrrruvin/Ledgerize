@@ -18,15 +18,13 @@ const AboutUs = ({ whyLedgerizesData, coreValuesData, ref }: LedgerizeProps) => 
      return (
           <>
                {/* who we are */}
-               <section id="aboutUs" ref={ref} className="position-relative overflow-hidden py-6 features-3">
+               <section id="aboutUs" ref={ref} className="position-relative overflow-hidden pt-6 pb-3 features-3">
                     <Container>
                          <Row className="">
                               <Col md={12}>
                                    <div className="mb-lg-0 mb-4" data-aos="fade-up" data-aos-duration="200">
-                                        <Badge pill bg="" className="badge-soft-danger px-2 py-1">
-                                             About Us
-                                        </Badge>
-                                        <h1 className="display-5 fw-medium mb-2">Who we are !</h1>
+                                   <h1 className="display-5 fw-medium mb-2">About Us</h1>
+                                        <h3 className="display-5 fw-medium mb-2">Who we are!</h3>
                                         <h5 className="fw-normal text-muted mx-auto mt-0 pb-2">
                                              Accledgwise is a dynamic startup founded by experienced professionals with over 15 years of expertise in bookkeeping,
                                              accounts preparation, finalization, and payroll services. The firm specializes in offering tailored bookkeeping,
@@ -35,7 +33,7 @@ const AboutUs = ({ whyLedgerizesData, coreValuesData, ref }: LedgerizeProps) => 
                                         <h5 className="fw-normal text-muted mx-auto mt-0 pb-2">
                                              Co-founder Mr. Vinay Thakkar brings over 10 years of experience, focusing on Australian businesses for the past 5 years.
                                              Supported by a skilled team of two chartered accountants, each with over 15 years of experience. The team is also well
-                                             equipped with accounting software / application which includes XERO, MYOB, Quick
+                                             equipped with accounting software / application which are commonly used which includes XERO, MYOB, Quick
                                              books, DEXT etc. The team is compatible enough to handle all the complexity involved during the services.
                                         </h5>
                                         <h5 className="fw-normal text-muted mx-auto mt-0 pb-2">
@@ -46,12 +44,12 @@ const AboutUs = ({ whyLedgerizesData, coreValuesData, ref }: LedgerizeProps) => 
                                              your business objectives, offering reliable, efficient, and cost-effective financial services to drive your success
                                              in a competitive environment.
                                         </h5>
-                                        <h1 className="display-5 fw-medium mb-2">Our Vision</h1>
+                                        <h3 className="display-5 fw-medium mb-2">Our Vision</h3>
                                         <h5 className="fw-normal text-muted mx-auto mt-0 pb-2">
                                              To be the preferred choice for comprehensive bookkeeping and Payroll services, delivering excellence through experienced
                                              and tech-savvy professionals.
                                         </h5>
-                                        <h1 className="display-5 fw-medium mb-2">Our Mission</h1>
+                                        <h3 className="display-5 fw-medium mb-2">Our Mission</h3>
                                         <h5 className="fw-normal text-muted mx-auto mt-0 pb-2">
                                              We are committed to delivering high-quality bookkeeping services, focusing on ethics, client satisfaction, and innovation,
                                              while building long-term relationships through an integrated approach that meets all client needs.
@@ -63,7 +61,7 @@ const AboutUs = ({ whyLedgerizesData, coreValuesData, ref }: LedgerizeProps) => 
                </section>
 
                {/* why accledgwise */}
-               <section className="position-relative overflow-hidden py-6 features-3">
+               <section className="position-relative overflow-hidden py-3 features-3">
                     <Container>
                          <Row className="align-items-center">
                               <Col lg={6}>
@@ -117,7 +115,7 @@ const AboutUs = ({ whyLedgerizesData, coreValuesData, ref }: LedgerizeProps) => 
                </section>
 
                {/* our core values */}
-               <section className="position-relative overflow-hidden py-6 features-3">
+               <section className="position-relative overflow-hidden py-3 features-3">
                     <Container>
                          <Row className="">
                               <Col lg={5} className="d-none d-lg-block">

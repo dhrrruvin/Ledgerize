@@ -14,7 +14,7 @@ const whyLedgerizesData: WhyLedgerizeData[] = [
           title: 'Cost Efficiency',
      },
      {
-          icon: 'cpu',
+          icon: 'user-check',
           title: 'Software Experts',
      },
      {
@@ -37,11 +37,11 @@ const whyLedgerizesData: WhyLedgerizeData[] = [
 
 const coreValuesData: CoreValueData[] = [
      {
-          icon: 'users',
+          icon: 'shield',
           title: 'Integrity and Confidentiality',
      },
      {
-          icon: 'users',
+          icon: 'clipboard',
           title: 'Accountability',
      },
      {
@@ -49,7 +49,7 @@ const coreValuesData: CoreValueData[] = [
           title: 'Security and Compliance',
      },
      {
-          icon: 'cpu',
+          icon: 'message-square',
           title: 'Effective Communication',
      },
      {

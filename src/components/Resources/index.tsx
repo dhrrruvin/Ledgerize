@@ -47,7 +47,7 @@ const Resources = ({ resourcesData, ref }: ResourcesProps) => {
 
      return (
           <section id="resources" ref={ref} className="section py-6 pt-sm-6 pb-sm-7 position-relative bg-light">
-               <div className="divider top d-none d-sm-block"></div>
+               <div className="divider top d-none d-sm-block z-n1"></div>
                <Container data-aos="fade-up" data-aos-duration="600">
                     <Row>
                          <Col className="text-center">
@@ -108,7 +108,7 @@ const Resources = ({ resourcesData, ref }: ResourcesProps) => {
                          </Col>
                     </Row>
                </Container>
-               <div className="divider bottom d-none d-sm-block"></div>
+               <div className="divider bottom d-none d-sm-block z-n1"></div>
           </section>
      )
 }

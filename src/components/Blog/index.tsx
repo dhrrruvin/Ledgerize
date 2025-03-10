@@ -8,7 +8,7 @@ interface BlogsProps {
 
 const Blog = ({ blogsData }: BlogsProps) => {
      return (
-          <section className="position-relative py-xl-8 py-6 features-3">
+          <section className="position-relative py-xl-4 py-3 features-3">
                <Container>
                     <Row className="justify-content-center">
                          <Col className="text-center">

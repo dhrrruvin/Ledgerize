@@ -14,6 +14,8 @@ import { softwareSpecializationsData } from "../SoftwareSpecialization/data"
 import { coreValuesData, whyLedgerizesData } from "../AboutUs/data"
 import { useEffect, useRef } from "react"
 import { useLocation } from "react-router-dom"
+import Blog from "../Blog"
+import { blogsData } from "../Blog/data"
 
 const HomePage = () => {
      const location = useLocation()
@@ -76,6 +78,9 @@ const HomePage = () => {
 
                {/* resources */}
                <Resources resourcesData={resourcesData} ref={resourcesRef} />
+
+               {/* Blogs */}
+               <Blog blogsData={blogsData} />
 
                {/* contact us */}
                <ContactUs ref={contactUsRef} />

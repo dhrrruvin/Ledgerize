@@ -12,19 +12,18 @@ const Hero = () => {
                <div className="shape3"></div>
                <Container>
                     <Row className="align-items-center row-cols-1 row-cols-md-2 justify-content-center justify-content-md-start mx-sm-2">
-                         <Col lg={5} md={4} xs={12} className="mb-4 mb-md-0 text-center text-md-start px-sm-5" style={{ display: 'flex', alignItems: 'center' }}>
+                         <Col lg={5} md={6} xs={12} className="mb-4 mb-md-0 text-center text-md-start px-sm-5" style={{ display: 'flex', alignItems: 'center' }}>
                               <img src={hero} alt="Hero" className="img-fluid hero-image" />
                          </Col>
                          <Col
                               lg={{ offset: 1, span: 6 }}
-                              md={8}
+                              md={6}
                               sm={12}
                               data-aos="fade-left"
                               data-aos-duration="2000"
-                              // className="mt-7"
                          >
                               <h1 className="hero-title text-center">
-                                   Accledgwise
+                                   Accledgwise Bookkeeping LLP
                               </h1>
                               <p className="hero-desc mt-3 fs-24 text-secondary">
                                    <i>
