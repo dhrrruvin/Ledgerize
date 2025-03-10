@@ -24,7 +24,7 @@ const Hero = () => {
                               // className="mt-7"
                          >
                               <h1 className="hero-title text-center">
-                                   Accledgerize
+                                   Accledgwise
                               </h1>
                               <p className="hero-desc mt-3 fs-24 text-secondary">
                                    <i>
@@ -34,7 +34,7 @@ const Hero = () => {
 
                               <div className="pt-3 pt-sm-5 text-center">
                                    <Link to="/home/contactus" className="btn btn-primary me-2" data-toggle="smooth-scroll">
-                                        <span className="me-2">Get Started with Accledgerize</span>
+                                        <span className="me-2">Get Started with Accledgwise</span>
                                    </Link>
                               </div>
                          </Col>

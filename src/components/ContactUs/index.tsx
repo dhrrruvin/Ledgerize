@@ -28,7 +28,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
 
      const [comapnyMailLoading, setCompanyMailSending] = useState(false);
      const [userMailLoading, setUserMailSending] = useState(false);
-     
+
      const [formData, setFormData] = useState<FormData>({
           name: '',
           contactNumber: '',
@@ -86,9 +86,9 @@ const ContactUs = ({ ref }: ContactUsProps) => {
           ).catch((error) => {
                console.error("Error: ", error)
           })
-          .finally(() => {
-               setUserMailSending(false)
-          });
+               .finally(() => {
+                    setUserMailSending(false)
+               });
 
           const companyTemplateParams = {
                contact: formData.contactNumber,
@@ -132,7 +132,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                               <Col lg={6} data-aos="fade-right" data-aos-duration="600">
                                    <h1 className="display-5 fw-medium mt-0">Get started today</h1>
                                    <p>
-                                        "Ledgerize  Your Trusted Offshore Partner for Professional Bookkeeping Services, Tailored to Meet the Unique Accounting Needs of Your Business or Family.
+                                        "Accledgwise  Your Trusted Offshore Partner for Professional Bookkeeping Services, Tailored to Meet the Unique Accounting Needs of Your Business or Family.
                                    </p>
                                    <p>
                                         Share your requirements and concerns with us, and we’ll provide a free quote for regular or one-time services. Contact us today!
@@ -142,7 +142,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                         <h4 className="mt-0 fw-medium">
                                              <Link
                                                   to="#"
-                                                  onClick={() => (window.location.href = 'mailto:ledgerize@domain.com')}
+                                                  onClick={() => (window.location.href = 'mailto:info@accledgwise.com')}
                                              >
                                                   info@accledgwise.com
                                              </Link>
@@ -152,24 +152,24 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                    <ul className="list-inline mt-1">
                                         <li className="list-inline-item me-3">
                                              <Link to="#">
-                                                  <FeatherIcon icon="facebook" className="icon-xs icon-dual" />
-                                             </Link>
-                                        </li>
-                                        <li className="list-inline-item me-3">
-                                             <Link to="#">
-                                                  <FeatherIcon icon="twitter" className="icon-xs icon-dual" />
-                                             </Link>
-                                        </li>
-                                        <li className="list-inline-item me-3">
-                                             <Link to="#">
                                                   <FeatherIcon icon="linkedin" className="icon-xs icon-dual" />
                                              </Link>
                                         </li>
                                         <li className="list-inline-item me-3">
-                                             <Link to="#">
+                                             <Link to="https://x.com/accledgwise">
+                                                  <FeatherIcon icon="x" className="icon-xs icon-dual" />
+                                             </Link>
+                                        </li>
+                                        <li className="list-inline-item me-3">
+                                             <Link to="https://www.instagram.com/accledgwise/" target="_blank">
                                                   <FeatherIcon icon="instagram" className="icon-xs icon-dual" />
                                              </Link>
                                         </li>
+                                        {/* <li className="list-inline-item me-3">
+                                             <Link to="#">
+                                                  <FeatherIcon icon="instagram" className="icon-xs icon-dual" />
+                                             </Link>
+                                        </li> */}
                                    </ul>
                               </Col>
                               <Col lg={6} data-aos="fade-left" data-aos-duration="900">

@@ -28,7 +28,7 @@ const resourcesData: ResourceData[] = [
                     text: 'Under Australian legislation, every employer must pay certain amount of your salary into a superannuation fund. It’s designed to help you build up and save for retirement. Use this tool to work out how much super you need to contribute for your eligible employees.'
                }
           ],
-          isCalculate: false,
+          isCalculate: true,
      },
      {
           title: 'Tax Withhelds for Individuals Calculator',
@@ -38,7 +38,7 @@ const resourcesData: ResourceData[] = [
                     text: 'Use this tool to estimate the federal income tax you want your employer to withhold from your paycheck. This is tax withholding. See how your withholding affects your refund, take-home pay or tax due.'
                }
           ],
-          isCalculate: false,
+          isCalculate: true,
      },
      {
           title: 'Government Website',

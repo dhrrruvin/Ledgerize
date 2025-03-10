@@ -28,18 +28,18 @@ const AboutUs = ({ whyLedgerizesData, coreValuesData, ref }: LedgerizeProps) => 
                                         </Badge>
                                         <h1 className="display-5 fw-medium mb-2">Who we are !</h1>
                                         <h5 className="fw-normal text-muted mx-auto mt-0 pb-2">
-                                             Ledgerize is a dynamic startup founded by experienced professionals with over 15 years of expertise in bookkeeping,
+                                             Accledgwise is a dynamic startup founded by experienced professionals with over 15 years of expertise in bookkeeping,
                                              accounts preparation, finalization, and payroll services. The firm specializes in offering tailored bookkeeping,
                                              BAS preparation, and other financial solutions specifically for Australian businesses at competitive prices.
                                         </h5>
                                         <h5 className="fw-normal text-muted mx-auto mt-0 pb-2">
                                              Co-founder Mr. Vinay Thakkar brings over 10 years of experience, focusing on Australian businesses for the past 5 years.
                                              Supported by a skilled team of two chartered accountants, each with over 15 years of experience. The team is also well
-                                             equipped with accounting software / application which are commonly used in worldwide which includes XERO, MYOB, Quick
+                                             equipped with accounting software / application which includes XERO, MYOB, Quick
                                              books, DEXT etc. The team is compatible enough to handle all the complexity involved during the services.
                                         </h5>
                                         <h5 className="fw-normal text-muted mx-auto mt-0 pb-2">
-                                             Ledgerize is dedicated to delivering a premium service experience focused on professionalism, ethical standards,
+                                             Accledgwise is dedicated to delivering a premium service experience focused on professionalism, ethical standards,
                                              data security, and client confidentiality. We provide personalized financial solutions tailored to each business,
                                              ensuring high quality and timely results. Our goal is to build long-term, trusted relationships that help businesses
                                              streamline operations and save time. By leveraging expertise and advanced technologies, we align our solutions with
@@ -62,15 +62,15 @@ const AboutUs = ({ whyLedgerizesData, coreValuesData, ref }: LedgerizeProps) => 
                     </Container>
                </section>
 
-               {/* why ledgerize */}
+               {/* why accledgwise */}
                <section className="position-relative overflow-hidden py-6 features-3">
                     <Container>
                          <Row className="align-items-center">
                               <Col lg={6}>
                                    <div className="mb-lg-0 mb-4" data-aos="fade-right" data-aos-duration="600">
-                                        <h1 className="display-5 fw-medium mb-2">Why Ledgerize?</h1>
+                                        <h1 className="display-5 fw-medium mb-2">Why Accledgwise?</h1>
                                         <h5 className="fw-normal text-muted mx-auto mt-0 mb-4 pb-3">
-                                             Choosing Ledgerize means choosing a partner committed to your financial success.
+                                             Choosing Accledgwise means choosing a partner committed to your financial success.
                                         </h5>
                                         <Row className="d-block d-lg-none">
                                              <Col className="px-2 px-xs-6 px-sm-6 px-md-10">

@@ -29,7 +29,7 @@ const SoftwareSpecialization = ({ softwareSpecializationsData }: SoftwareSpecial
                          <Col lg={4}>
                               <div className="text-lg-center mt-5 mt-lg-0">
                                    <Link to="#" className="btn btn-primary rounded">
-                                        Get started with Ledgerize
+                                        Get started with Accledgwise
                                         <FeatherIcon icon="arrow-right" className="icon-xs ms-1" />
                                    </Link>
                               </div>

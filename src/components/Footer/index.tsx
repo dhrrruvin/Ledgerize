@@ -27,7 +27,7 @@ const Footer: React.FC<Props> = () => {
                                         </li>
                                    </ul>
                                    <p className="mt-2">
-                                        {new Date().getFullYear()}© Ledgerize Advisory LLP. All rights reserved.
+                                        {new Date().getFullYear()}© Accledgwise Bookeeping LLP. All rights reserved.
                                    </p>
                               </Col>
                          </Row>

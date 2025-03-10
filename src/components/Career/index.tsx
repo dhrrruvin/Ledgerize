@@ -10,7 +10,7 @@ const Career = () => {
                          <Col>
                               <h1 className="hero-title mt-0">
                                    Let's work <span className="highlight highlight-warning d-inline-block">together</span>.
-                                   Join Ledgerize!
+                                   Join Accledgwise!
                               </h1>
                               <p className="fs-16 text-muted pt-3 w-75">
                                    We're always open for new creative, analytical and technical minds to join our team. Search
