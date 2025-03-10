@@ -11,6 +11,7 @@ const AllRoutes = () => {
      return useRoutes([
           { path: '/', element: <Navigate to='/home' replace /> },
           { path: "/home/resources/EMICalculator", element: <EMICalculator /> },
+          { path: "/home", element: <HomePage /> },
           { path: "/home/*", element: <HomePage /> },
      ])
 }
