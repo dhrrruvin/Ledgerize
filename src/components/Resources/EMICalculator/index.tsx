@@ -60,7 +60,7 @@ const EMICalculator = () => {
                     <div className="py-0 py-sm-4 px-0 px-sm-3 bg-light min-vh-100">
                          <Container fluid>
                               <Row>
-                                   <Col xl={4}>
+                                   <Col xl={4} md={6}>
                                         <Card>
                                              <Card.Body>
                                                   <Card.Title>EMI Calculator</Card.Title>
@@ -155,27 +155,27 @@ const EMICalculator = () => {
                                              </Card.Body>
                                         </Card>
                                    </Col>
-                                   <Col xl={4}>
+                                   <Col xl={4} md={6}>
                                         <Card className="d-flex align-items-center text-center">
                                              <Card.Body>
                                                   <div>
                                                        <p>Loan EMI</p>
                                                        {emi !== null && (
-                                                            <h4>₹ {emi.toFixed(2)}</h4>
+                                                            <h4>₹ {emi.toFixed(0)}</h4>
                                                        )}
                                                   </div>
                                                   <hr />
                                                   <div>
                                                        <p>Total Interest Payments</p>
                                                        {totalInterestPayemnt !== null && (
-                                                            <h4>₹ {totalInterestPayemnt.toFixed(2)}</h4>
+                                                            <h4>₹ {totalInterestPayemnt.toFixed(0)}</h4>
                                                        )}
                                                   </div>
                                                   <hr />
                                                   <div>
                                                        <p>Total of Payments <br />(principal + Interest)</p>
                                                        {totalPayment !== null && (
-                                                            <h4>₹ {totalPayment.toFixed(2)}</h4>
+                                                            <h4>₹ {totalPayment.toFixed(0)}</h4>
                                                        )}
                                                   </div>
                                              </Card.Body>
@@ -185,14 +185,14 @@ const EMICalculator = () => {
                                         <Card>
                                              <Card.Body>
                                                   {emi && totalInterestPayemnt !== null && (
-                                                       <Chart loanAmount={loanAmount} totalInterestPayemnt={totalInterestPayemnt} />
+                                                       <Chart loanAmount={Number(loanAmount.toFixed(0))} totalInterestPayemnt={Number(totalInterestPayemnt.toFixed(0))} />
                                                   )}
                                              </Card.Body>
                                         </Card>
                                    </Col>
                               </Row>
                               <Row>
-                                   <Col>
+                                   <Col data-aos="fade-right" data-aos-duration="600">
                                         <h1>Reliable, Free and accurate EMI Calculate</h1>
                                         <p>
                                              An EMI (Equated Monthly Installment) calculator is a tool that helps you calculate the monthly payments you need to make towards a loan, such as a home loan, car loan, or personal loan. It takes into account the loan amount, interest rate, and loan tenure to provide an accurate estimate of your monthly payments. A reliable, free, and accurate EMI calculator is essential for financial planning and budgeting.
@@ -210,7 +210,7 @@ const EMICalculator = () => {
                               </Row>
                          </Container>
                     </div>
-               </div>
+               </div >
 
                <ContactUs ref={contactUsRef} />
                <Footer />

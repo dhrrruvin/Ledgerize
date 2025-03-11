@@ -1,36 +1,84 @@
 .service {
-    .service-item {
-        background-color: $primary;
-        height: 25vh; // Default height
-        border-radius: $border-radius-lg;
-        display: block;
-        text-decoration: none;
-        z-index: 0;
-        overflow: hidden;
-        position: relative;
-        top: 0;
-
-        &:hover {
-            box-shadow: $box-shadow-lg !important;
-            transition: all 0.25s ease-out;
-            top: -5px;
-            border: 1px solid $primary !important;
-        }
-    }
+	height: 220px;
+	perspective: 2000px;
+	position: relative;
+    border-radius: $border-radius-lg;
+	.service-item {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		transform: translate3d(0, 0, 0);
+		transform-style: preserve-3d;
+		transition: transform 1s;
+		.side {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			backface-visibility: hidden;
+			transform-style: preserve-3d;
+			transform: translate3d(0, 0, 0);
+            display: inline-grid;
+            align-items: center;
+		}
+		.side1 {
+			background: $primary;
+            text-align: center;
+			padding: $spacer * 2;
+			border-radius: $border-radius * 2;
+		}
+		.side2 {
+			background: $info;
+			transform: rotateY(180deg);
+            text-align: center;
+            padding: $spacer;
+			border-radius: $border-radius * 2;
+		}
+		// * {
+		// 	text-align: center;
+		// 	padding: $spacer * 2;
+		// }
+	}
+	&:hover {
+		.service-item {
+			transform: rotateY(180deg);
+		}
+	}
 }
 
-@media (max-width: 768px) { // For iPad and mobile
-    .service {
-        .service-item {
-            height: 18vh; //djust this value as needed for iPad
-        }
-    }
-}
 
-@media (max-width: 480px) { // For mobile view
-    .service {
-        .service-item {
-            height: 18vh; //Adjust this value as needed for mobile
-        }
-    }
-}
+// .service {
+//     .service-item {
+//         background-color: $primary;
+//         height: 25vh; // Default height
+//         border-radius: $border-radius-lg;
+//         display: block;
+//         text-decoration: none;
+//         z-index: 0;
+//         overflow: hidden;
+//         position: relative;
+//         top: 0;
+
+//         &:hover {
+//             box-shadow: $box-shadow-lg !important;
+//             transition: all 0.25s ease-out;
+//             top: -5px;
+//             border: 1px solid $primary !important;
+//         }
+//     }
+// }
+
+// @media (max-width: 768px) { // For iPad and mobile
+//     .service {
+//         .service-item {
+//             height: 18vh; //djust this value as needed for iPad
+//         }
+//     }
+// }
+
+// @media (max-width: 480px) { // For mobile view
+//     .service {
+//         .service-item {
+//             height: 18vh; //Adjust this value as needed for mobile
+//         }
+//     }
+// }

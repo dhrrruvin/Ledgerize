@@ -4,6 +4,7 @@ import FormInput from "../Form/FormInput"
 import { Link } from "react-router-dom"
 import { useState } from "react";
 import emailjs from 'emailjs-com';
+import { Bounce, toast, ToastContainer } from "react-toastify";
 
 interface ContactUsProps {
      ref: React.RefObject<HTMLDivElement | null>;
@@ -26,8 +27,7 @@ interface FormData {
 
 const ContactUs = ({ ref }: ContactUsProps) => {
 
-     const [comapnyMailLoading, setCompanyMailSending] = useState(false);
-     const [userMailLoading, setUserMailSending] = useState(false);
+     const [mailLoading, setIsMainSending] = useState(false);
 
      const [formData, setFormData] = useState<FormData>({
           name: '',
@@ -63,32 +63,12 @@ const ContactUs = ({ ref }: ContactUsProps) => {
 
      const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
           event.preventDefault();
-          setCompanyMailSending(true)
-          setUserMailSending(true)
+          setIsMainSending(true)
 
           const customerTemplateParams = {
                to_name: formData.name,
                to_email: formData.email
           };
-
-          emailjs.send(
-               process.env.REACT_APP_EMAILJS_SERVICEID!,
-               process.env.REACT_APP_EMAILJS_USER_TEMPLATEID!,
-               customerTemplateParams,
-               process.env.REACT_APP_EMAILJS_USERID
-          ).then(
-               (response) => {
-                    console.log('SUCCESS!', response.status, response.text);
-               },
-               (err) => {
-                    console.log('FAILED...', err);
-               }
-          ).catch((error) => {
-               console.error("Error: ", error)
-          })
-               .finally(() => {
-                    setUserMailSending(false)
-               });
 
           const companyTemplateParams = {
                contact: formData.contactNumber,
@@ -98,20 +78,31 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                service_type: formData.serviceType ? formData.serviceType : 'Virtual Bookkeeping'
           }
 
-          emailjs.send(
+          const promise1 = emailjs.send(
+               process.env.REACT_APP_EMAILJS_SERVICEID!,
+               process.env.REACT_APP_EMAILJS_USER_TEMPLATEID!,
+               customerTemplateParams,
+               process.env.REACT_APP_EMAILJS_USERID
+          )
+
+          const promise2 = emailjs.send(
                process.env.REACT_APP_EMAILJS_SERVICEID!,
                process.env.REACT_APP_EMAILJS_COMPANY_TEMPLATEID!,
                companyTemplateParams,
                process.env.REACT_APP_EMAILJS_USERID
           )
-               .then((response) => {
-                    console.log('SUCCESS!', response.status, response.text);
-               })
-               .catch((err) => {
-                    console.error('Error: ', err);
-               }).finally(() => {
-                    setCompanyMailSending(false)
-               })
+
+          const emailPromise = Promise.allSettled([promise1, promise2])
+
+          emailPromise.finally(() => {
+               setIsMainSending(false)
+          })
+
+          toast.promise(emailPromise, {
+               pending: 'Your email is being set. Please wait a moment.',
+               success: 'Your email has been sent successfully.',
+               error: 'Unable to send email. Please try again after some time.',
+          })
      };
 
      const naturesOfWork = [
@@ -141,6 +132,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                    <div>
                                         <h4 className="mt-0 fw-medium">
                                              <Link
+                                                  target="_blank"
                                                   to="#"
                                                   onClick={() => (window.location.href = 'mailto:info@accledgwise.com')}
                                              >
@@ -151,12 +143,12 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                    <div className="mt-5 text-muted">Social</div>
                                    <ul className="list-inline mt-1">
                                         <li className="list-inline-item me-3">
-                                             <Link to="#">
+                                             <Link target="_blank" to="https://www.linkedin.com/in/accledgwise-bookkeeping-llp-923134354/">
                                                   <FeatherIcon icon="linkedin" className="icon-xs icon-dual" />
                                              </Link>
                                         </li>
                                         <li className="list-inline-item me-3">
-                                             <Link to="https://x.com/accledgwise">
+                                             <Link target="_blank" to="https://x.com/accledgwise">
                                                   <FeatherIcon icon="x" className="icon-xs icon-dual" />
                                              </Link>
                                         </li>
@@ -263,7 +255,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                              </Col>
                                         </Row>
                                         <div className="mb-0 text-end" style={{ paddingInline: '12px' }}>
-                                             <Button variant="primary" type="submit" disabled={comapnyMailLoading || userMailLoading}>
+                                             <Button variant="primary" type="submit" disabled={mailLoading}>
                                                   Submit
                                              </Button>
                                         </div>
@@ -272,6 +264,19 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                          </Row>
                     </Container>
                </section>
+               <ToastContainer
+                    position="bottom-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick={false}
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable={false}
+                    pauseOnHover
+                    theme="colored"
+                    transition={Bounce}
+               />
           </>
      )
 }

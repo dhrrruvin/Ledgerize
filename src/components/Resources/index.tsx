@@ -89,7 +89,7 @@ const Resources = ({ resourcesData, ref }: ResourcesProps) => {
                                                                                      <span>{desc.text}</span>
                                                                                      {resource.isCalculate ? (
                                                                                           <div className="d-flex justify-content-end">
-                                                                                               <Link to={desc.linkId} className="btn btn-primary text-white">Calculate</Link>
+                                                                                               <Link to={desc.linkId} target="_blank" className="btn btn-primary text-white">Calculate</Link>
                                                                                           </div>
                                                                                      ) : (
                                                                                           <a href={desc.linkId} rel="noreferrer" target="_blank">Click Here</a>

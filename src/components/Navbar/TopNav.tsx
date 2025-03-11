@@ -1,13 +1,13 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo/logo.jpg";
+import logo from "../../assets/images/logo/logo.png";
 
 const TopNav = () => {
      return (
           <header>
                <Navbar expand="lg" sticky="top" className="navbar-expand-lg navbar-light">
                     <Link to="/home" className="navbar-brand logo">
-                         <img src={logo} style={{ height: '40px' }} className="align-top logo-dark" alt="" />
+                         <img src={logo} height={100} width="auto" className="align-top logo-dark" alt="AccLedgerize" />
                     </Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">

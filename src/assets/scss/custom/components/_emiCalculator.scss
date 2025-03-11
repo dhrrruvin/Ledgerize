@@ -2,4 +2,35 @@
      .card {
           height: 100%;
      }
+
+     .recharts-pie-sector:focus,
+     .recharts-pie-sector>g:focus,
+     .recharts-pie-sector>g>g:focus {
+          outline: none !important;
+          outline-color: none;
+          outline-style: none;
+          outline-width: none;
+     }
+
+     .recharts-pie-sector:focus,
+     .recharts-pie-sector>path:focus,
+     .recharts-pie-sector>path>path:focus {
+          outline: none !important;
+          outline-color: none;
+          outline-style: none;
+          outline-width: none;
+     }
+
+}
+
+@media (min-width: 768px) {
+
+     .card {
+          height: 95% !important;
+     }
+
+     // Adjust cx value for iPad mode
+     .recharts-pie {
+          cx: 75%; // Example adjustment, modify as needed
+     }
 }

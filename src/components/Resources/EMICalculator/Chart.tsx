@@ -1,5 +1,5 @@
 import React, { SetStateAction, useCallback, useState } from "react";
-import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Sector } from "recharts";
+import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Sector, Tooltip } from "recharts";
 
 interface ChartProps {
      loanAmount: number;
@@ -104,11 +104,11 @@ const Chart: React.FC<ChartProps> = ({ loanAmount, totalInterestPayemnt }) => {
                          <Pie
                               data={data}
                               activeIndex={activeIndex}
-                              activeShape={renderActiveShape}
-                              cx={150}
-                              cy={170}
-                              innerRadius={60}
-                              outerRadius={100}
+                              // activeShape={renderActiveShape}
+                              cx="50%"
+                              cy="50%"
+                              innerRadius={80}
+                              outerRadius={120}
                               dataKey="value"
                               onMouseEnter={onPieEnter}
                          >
@@ -116,7 +116,7 @@ const Chart: React.FC<ChartProps> = ({ loanAmount, totalInterestPayemnt }) => {
                                    <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                               ))}
                          </Pie>
-                         {/* <Tooltip /> */}
+                         <Tooltip />
                          <Legend />
                     </PieChart>
                </ResponsiveContainer>

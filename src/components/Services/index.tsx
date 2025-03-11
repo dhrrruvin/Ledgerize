@@ -18,7 +18,45 @@ const Services = ({ servicesData, ref }: ServicesProps) => {
                               <h1 className="display-5 fw-semibold">What We Do</h1>
                          </Col>
                     </Row>
-                    <Row className="pt-5 service">
+                    <Row className="pt-5">
+                         {(servicesData || []).map((service, index) => {
+                              return (
+                                   <Col key={index} lg={4} md={6} sm={12} className="mb-4">
+                                        <div className="service">
+                                             <div className="service-item">
+                                                  <div className="side side1">
+                                                       <span
+                                                            className={classNames(
+                                                                 'bg-soft-' + service.variant,
+                                                                 'text-' + service.variant,
+                                                                 'avatar',
+                                                                 'avatar-sm',
+                                                                 'rounded-lg',
+                                                                 'icon',
+                                                                 'icon-with-bg',
+                                                                 'icon-xs',
+                                                                 'mx-auto',
+                                                                 'mt-3',
+                                                            )}
+                                                       >
+                                                            <FeatherIcon
+                                                                 icon={service.icon}
+                                                                 className={classNames('icon-dual-' + service.variant)}
+                                                            />
+                                                       </span>
+                                                       <h3 className="text-white">{service.title}</h3>
+                                                  </div>
+                                                  <div className="side side2">
+                                                       <p className="text-white mb-0">{service.description}</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </Col>
+                              )
+                         })}
+                    </Row>
+
+                    {/* <Row className="pt-5 service">
                          {(servicesData || []).map((service, index) => {
                               return (
                                    <Col lg={4} md={6} key={index.toString()}>
@@ -55,7 +93,7 @@ const Services = ({ servicesData, ref }: ServicesProps) => {
                                    </Col>
                               );
                          })}
-                    </Row>
+                    </Row> */}
                </Container>
                <div className="divider bottom d-none d-sm-block"></div>
           </section>
