@@ -25,7 +25,7 @@ const Hero = () => {
                               <h1 className="hero-title text-center">
                                    Accledgwise Bookkeeping LLP
                               </h1>
-                              <p className="hero-desc mt-3 fs-24 text-secondary">
+                              <p className="hero-desc mt-3 fs-24 text-secondary" data-aos="fade-left" data-aos-duration="200">
                                    <i>
                                         "Your Trusted Offshore Partner for Professional Bookkeeping and Payroll Services"
                                    </i>

@@ -113,7 +113,7 @@ const Chart: React.FC<ChartProps> = ({ loanAmount, totalInterestPayemnt }) => {
                               onMouseEnter={onPieEnter}
                          >
                               {data.map((entry, index) => (
-                                   <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+                                   <Cell key={`cell-${index}`} style={{ outline: 'none' }} fill={colors[index % colors.length]} />
                               ))}
                          </Pie>
                          <Tooltip />
