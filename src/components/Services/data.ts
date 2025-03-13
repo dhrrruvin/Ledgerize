@@ -10,7 +10,7 @@ const servicesData: ServiceData[] = [
         variant: 'info',
         icon: 'book',
         title: 'Virtual Bookkeeping',
-        description: 'Streamline your finances with expert virtual bookkeeping. We offer precise reconciliations, tax preparation, payroll, and financial reporting—secure, efficient, and cost-effective solutions tailored to your business needs.',
+        description: 'Accledgwise provides efficient cloud-based bookkeeping with standardized procedures, top accounting software, and custom reporting tools. We tailor our services to meet each client’s unique financial needs with precision.',
     },
     {
         variant: 'info',
@@ -22,13 +22,13 @@ const servicesData: ServiceData[] = [
         variant: 'info',
         icon: 'credit-card',
         title: 'Accounts Payable & Receivable',
-        description: 'Optimize cash flow with expert Accounts Payable & Receivable management. We ensure timely payments, accurate invoicing, and seamless reconciliation, enhancing efficiency, reducing errors, and improving your business’s financial health.',
+        description: 'Accounts Receivable manages billing, orders, aging analysis, collections, cash forecasting, and reporting, including overdue tracking, credit policies, and automated billing.\nAccounts Payable handles invoice digitization, secure storage, payment approvals, expense allocation, online payments, and vendor inquiries',
     },
     {
         variant: 'info',
         icon: 'check-circle',
         title: 'Reconciliation',
-        description: 'Ensure accuracy with expert reconciliation services. We match transactions, identify discrepancies, and maintain error-free financial records, enhancing cash flow, compliance, and decision-making for a seamless accounting process',
+        description: 'We offer vendor invoice reconciliation, credit card and bank statement matching, cheque sequencing, and balance sheet reconciliation to enhance cash flow, track unsettled and overdue payments, and ensure financial accuracy.',
     },
     {
         variant: 'info',
