@@ -143,7 +143,7 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                                    <div className="mt-5 text-muted">Social</div>
                                    <ul className="list-inline mt-1">
                                         <li className="list-inline-item me-3">
-                                             <Link target="_blank" to="https://www.linkedin.com/in/accledgwise-bookkeeping-llp-923134354/">
+                                             <Link target="_blank" to="https://www.linkedin.com/company/accledgwise-bookkeeping-llp">
                                                   <FeatherIcon icon="linkedin" className="icon-xs icon-dual" />
                                              </Link>
                                         </li>
