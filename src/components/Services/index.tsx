@@ -46,7 +46,7 @@ const Services = ({ servicesData, ref }: ServicesProps) => {
                                                        </span>
                                                        <h3 className="text-white">{service.title}</h3>
                                                   </div>
-                                                  <div className="side side2">
+                                                  <div className="side side2" style={{ overflowY: 'scroll', scrollbarWidth: 'none' }}>
                                                        <p className="text-white mb-0">{service.description}</p>
                                                   </div>
                                              </div>
