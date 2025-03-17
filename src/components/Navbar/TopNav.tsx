@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo/logo.png";
 
@@ -22,8 +22,14 @@ const TopNav = () => {
                                    <Link className="nav-link" to="/home/services">Services</Link>
                               </Nav.Item>
                               <Nav.Item>
+                                   <Link className="nav-link" to="/home/softwareSpecialization">Software Specialization</Link>
+                              </Nav.Item>
+                              <Nav.Item>
                                    <Link className="nav-link" to="/home/resources">Resources</Link>
                               </Nav.Item>
+                              {/* <Nav.Item>
+                                   <Link className="nav-link" to="/home/blog">Blog</Link>
+                              </Nav.Item> */}
                               <Nav.Item>
                                    <Link className="btn btn-outline-secondary btn-sm" to="/home/contactus">Contact Us</Link>
                               </Nav.Item>

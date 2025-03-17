@@ -1,4 +1,4 @@
-import { Badge, Card, Col, Container, Row } from "react-bootstrap"
+import { Card, Col, Container, Row } from "react-bootstrap"
 import FeatherIcon from "feather-icons-react"
 
 // images
@@ -23,7 +23,7 @@ const AboutUs = ({ whyLedgerizesData, coreValuesData, ref }: LedgerizeProps) => 
                          <Row className="">
                               <Col md={12}>
                                    <div className="mb-lg-0 mb-4" data-aos="fade-up" data-aos-duration="200">
-                                   <h1 className="display-5 fw-medium mb-2">About Us</h1>
+                                        <h1 className="display-5 fw-medium mb-2">About Us</h1>
                                         <h3 className="display-5 fw-medium mb-2">Who we are!</h3>
                                         <h5 className="fw-normal text-muted mx-auto mt-0 pb-2">
                                              Accledgwise is a dynamic startup founded by experienced professionals with over 15 years of expertise in bookkeeping,

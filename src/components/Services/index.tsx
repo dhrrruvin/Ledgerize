@@ -1,5 +1,5 @@
 import FeatherIcon from "feather-icons-react";
-import { Card, Col, Container, Row } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
 import { ServiceData } from "./data";
 import classNames from "classnames";
 

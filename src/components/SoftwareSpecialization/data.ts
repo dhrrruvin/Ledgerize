@@ -8,6 +8,11 @@ export interface SoftwareSpecializationData{
      softwareName: string;
 }
 
+export interface CertificationsData {
+     certificationIcon: string;
+     certificationName: string;
+}
+
 const softwareSpecializationsData: SoftwareSpecializationData[] = [
      {
           softwareIcon: xero,
@@ -27,4 +32,11 @@ const softwareSpecializationsData: SoftwareSpecializationData[] = [
      },
 ]
 
-export { softwareSpecializationsData };
+const certificationsData: CertificationsData[] = [
+     {
+          certificationIcon: 'https://example.com/certification-icon-1.jpg',
+          certificationName: 'Certification 1'
+     }
+]
+
+export { softwareSpecializationsData, certificationsData };

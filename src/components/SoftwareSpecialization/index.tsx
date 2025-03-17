@@ -1,19 +1,21 @@
 import { Col, Container, Row } from "react-bootstrap"
-import { SoftwareSpecializationData } from "./data"
+import { CertificationsData, SoftwareSpecializationData } from "./data"
 import FeatherIcon from "feather-icons-react";
 import { Link } from "react-router-dom";
 
 interface SoftwareSpecializationProps {
      softwareSpecializationsData: SoftwareSpecializationData[];
+     certificationData: CertificationsData[];
+     ref: React.RefObject<HTMLDivElement | null>;
 }
-const SoftwareSpecialization = ({ softwareSpecializationsData }: SoftwareSpecializationProps) => {
+const SoftwareSpecialization = ({ softwareSpecializationsData, certificationData, ref }: SoftwareSpecializationProps) => {
      return (
-          <section id="softwareSpecialization" className="py-6 px-3">
+          <section ref={ref} id="softwareSpecialization" className="py-6 px-3">
                <Container className="bg-soft-white border p-5 rounded-lg" data-aos="fade-up" data-aos-duration="700">
-                    <h4 className="display-5 fw-medium mb-2">Software Specialization</h4>
                     <Row className="align-items-center">
                          <Col lg={8}>
-                              <ul className="list-inline mb-0 mt-4">
+                              <h4 className="display-5 fw-medium mb-2">Software Specialization</h4>
+                              <ul className="list-inline my-4">
                                    {softwareSpecializationsData.map((softwareSpecialization, index) => {
                                         return (
                                              <li className="list-inline-item text-center" key={index.toString()}>
@@ -21,6 +23,19 @@ const SoftwareSpecialization = ({ softwareSpecializationsData }: SoftwareSpecial
                                                        <img src={softwareSpecialization.softwareIcon} alt="" width={50} height={50} />
                                                   </span>
                                                   <h6 className="mb-lg-0">{softwareSpecialization.softwareName}</h6>
+                                             </li>
+                                        );
+                                   })}
+                              </ul>
+                              <h4 className="display-5 fw-medium mb-2">Certifications</h4>
+                              <ul className="list-inline my-4">
+                                   {certificationData.map((certification, index) => {
+                                        return (
+                                             <li className="list-inline-item text-center" key={index.toString()}>
+                                                  <span className="icon icon-sm text-secondary">
+                                                       <img src={certification.certificationIcon} alt="" width={50} height={50} />
+                                                  </span>
+                                                  <h6 className="mb-lg-0">{certification.certificationName}</h6>
                                              </li>
                                         );
                                    })}

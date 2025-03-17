@@ -48,7 +48,8 @@ const EMICalculator = () => {
      useEffect(() => {
           calculateEMI();
           window.scrollTo(0, 0);
-     }, []);
+     }, [calculateEMI]);
+
 
      return (
           <>

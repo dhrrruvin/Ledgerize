@@ -1,5 +1,5 @@
 import FeatherIcon from "feather-icons-react"
-import { Button, Col, Container, Dropdown, Form, Row } from "react-bootstrap"
+import { Button, Col, Container, Form, Row } from "react-bootstrap"
 import FormInput from "../Form/FormInput"
 import { Link } from "react-router-dom"
 import { useState } from "react";
@@ -98,7 +98,19 @@ const ContactUs = ({ ref }: ContactUsProps) => {
                setIsMainSending(false)
           })
 
+          emailPromise.finally(() => {
+               setFormData({
+                    name: '',
+                    contactNumber: '',
+                    email: '',
+                    serviceType: '',
+                    websiteCompanyName: '',
+                    description: ''
+               });
+          });
+
           toast.promise(emailPromise, {
+
                pending: 'Your email is being set. Please wait a moment.',
                success: 'Your email has been sent successfully.',
                error: 'Unable to send email. Please try again after some time.',

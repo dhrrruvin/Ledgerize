@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 
 interface BlogsProps {
      blogsData: BlogData[];
+     ref: React.RefObject<HTMLDivElement | null>;
 }
 
-const Blog = ({ blogsData }: BlogsProps) => {
+const Blog = ({ blogsData, ref }: BlogsProps) => {
      return (
-          <section className="position-relative py-xl-4 py-3 features-3">
+          <section ref={ref} className="position-relative py-xl-4 py-3 features-3">
                <Container>
                     <Row className="justify-content-center">
                          <Col className="text-center">

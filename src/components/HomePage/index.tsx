@@ -1,3 +1,8 @@
+
+import { useEffect, useRef } from "react"
+import { useLocation } from "react-router-dom"
+
+// component
 import AboutUs from "../AboutUs"
 import ContactUs from "../ContactUs"
 import Footer from "../Footer"
@@ -10,19 +15,17 @@ import SoftwareSpecialization from "../SoftwareSpecialization"
 // data
 import { resourcesData } from "../Resources/data"
 import { servicesData } from "../Services/data"
-import { softwareSpecializationsData } from "../SoftwareSpecialization/data"
+import { certificationsData, softwareSpecializationsData } from "../SoftwareSpecialization/data"
 import { coreValuesData, whyLedgerizesData } from "../AboutUs/data"
-import { useEffect, useRef } from "react"
-import { useLocation } from "react-router-dom"
-import Blog from "../Blog"
-import { blogsData } from "../Blog/data"
 
 const HomePage = () => {
      const location = useLocation()
      const homeRef = useRef<HTMLDivElement | null>(null);
      const aboutUsRef = useRef<HTMLDivElement | null>(null);
      const servicesRef = useRef<HTMLDivElement | null>(null);
+     const softwareSpecializationRef = useRef<HTMLDivElement | null>(null);
      const resourcesRef = useRef<HTMLDivElement | null>(null);
+     const blogRef = useRef<HTMLDivElement | null>(null);
      const contactUsRef = useRef<HTMLDivElement | null>(null);
 
      useEffect(() => {
@@ -32,7 +35,7 @@ const HomePage = () => {
                     homeRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
                }, 300)
           }
-          else if(location.pathname === '/home/aboutus' && aboutUsRef.current) {
+          else if (location.pathname === '/home/aboutus' && aboutUsRef.current) {
                id = setTimeout(() => {
                     aboutUsRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
                }, 300)
@@ -42,9 +45,19 @@ const HomePage = () => {
                     servicesRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
                }, 300)
           }
+          else if (location.pathname === '/home/softwareSpecialization' && softwareSpecializationRef.current) {
+               id = setTimeout(() => {
+                    softwareSpecializationRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+               }, 300)
+          }
           else if (location.pathname === '/home/resources' && resourcesRef.current) {
                id = setTimeout(() => {
                     resourcesRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+               }, 300)
+          }
+          else if (location.pathname === '/home/blog' && blogRef.current) {
+               id = setTimeout(() => {
+                    blogRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
                }, 300)
           }
           else if (location.pathname === '/home/contactus' && contactUsRef.current) {
@@ -55,7 +68,7 @@ const HomePage = () => {
           return (() => {
                clearTimeout(id)
           })
-     }, [location, servicesRef, aboutUsRef, contactUsRef, resourcesRef, homeRef])
+     }, [location, softwareSpecializationRef, servicesRef, aboutUsRef, contactUsRef, resourcesRef, homeRef])
 
      return (
           <div>
@@ -74,13 +87,17 @@ const HomePage = () => {
                <Services servicesData={servicesData} ref={servicesRef} />
 
                {/* software specialization */}
-               <SoftwareSpecialization softwareSpecializationsData={softwareSpecializationsData} />
+               <SoftwareSpecialization
+                    softwareSpecializationsData={softwareSpecializationsData}
+                    certificationData={certificationsData}
+                    ref={softwareSpecializationRef}
+               />
 
                {/* resources */}
                <Resources resourcesData={resourcesData} ref={resourcesRef} />
 
                {/* Blogs */}
-               <Blog blogsData={blogsData} />
+               {/* <Blog blogsData={blogsData} ref={blogRef} /> */}
 
                {/* contact us */}
                <ContactUs ref={contactUsRef} />
