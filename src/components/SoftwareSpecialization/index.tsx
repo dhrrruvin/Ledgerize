@@ -58,7 +58,7 @@ const SoftwareSpecialization = ({ softwareSpecializationsData, certificationData
                          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                               <h1 className="display-5 fw-medium m-0">Software Specialization</h1>
                               <div className="text-lg-center mt-lg-0">
-                                   <Link to="#" className="btn btn-primary rounded">
+                                   <Link to="/home/contactus" className="btn btn-primary rounded">
                                         Get started with Accledgwise
                                         <FeatherIcon icon="arrow-right" className="icon-xs ms-1" />
                                    </Link>
@@ -69,7 +69,7 @@ const SoftwareSpecialization = ({ softwareSpecializationsData, certificationData
                                    return (
                                         <Col xs={6} sm={4} lg={3} style={{ textAlign: 'center' }}>
                                              <span className="icon icon-sm text-secondary">
-                                                  <img src={softwareSpecialization.softwareIcon} alt="" width={120} height={120} />
+                                                  <img src={softwareSpecialization.softwareIcon} alt="" width={100} height={100} />
                                              </span>
                                              <h6 className="mb-lg-0">{softwareSpecialization.softwareName}</h6>
                                         </Col>
@@ -84,7 +84,7 @@ const SoftwareSpecialization = ({ softwareSpecializationsData, certificationData
                                    return (
                                         <Col xs={6} sm={4} lg={3} style={{ textAlign: 'center' }}>
                                              <span className="icon icon-sm text-secondary">
-                                                  <img src={certification.certificationIcon} alt="" width={120} height={120} />
+                                                  <img src={certification.certificationIcon} alt="" width={100} height={100} />
                                              </span>
                                         </Col>
                                    );
