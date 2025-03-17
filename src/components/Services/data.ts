@@ -22,7 +22,7 @@ const servicesData: ServiceData[] = [
         variant: 'info',
         icon: 'credit-card',
         title: 'Accounts Payable & Receivable',
-        description: 'Accounts Receivable manages billing, orders, aging analysis, collections, cash forecasting, and reporting, including overdue tracking, credit policies, and automated billing.\n\nAccounts Payable handles invoice digitization, secure storage, payment approvals, expense allocation, online payments, and vendor inquiries',
+        description: 'Accounts Receivable manages billing, orders, aging analysis, collections, cash forecasting, and reporting, including overdue tracking, credit policies, and automated billing. \nAccounts Payable handles invoice digitization, secure storage, payment approvals, expense allocation, online payments, and vendor inquiries',
     },
     {
         variant: 'info',

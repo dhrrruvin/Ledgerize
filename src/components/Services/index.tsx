@@ -47,7 +47,7 @@ const Services = ({ servicesData, ref }: ServicesProps) => {
                                                        <h3 className="text-white">{service.title}</h3>
                                                   </div>
                                                   <div className="side side2" style={{ overflowY: 'scroll', scrollbarWidth: 'none' }}>
-                                                       <p className="text-white mb-0">{service.description}</p>
+                                                       <p className="text-white mb-0" style={{ whiteSpace: 'break-spaces' }}>{service.description}</p>
                                                   </div>
                                              </div>
                                         </div>

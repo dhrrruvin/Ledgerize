@@ -4,6 +4,7 @@ import myob from '../../assets/images/software/myob.jpg';
 import dext from '../../assets/images/software/dext.jpg';
 import qbCertification from '../../assets/images/software/qb-certification.png';
 import xeroCertification from '../../assets/images/software/xero.png';
+import qbCertificationLevel1 from '../../assets/images/software/qblevel1.png';
 
 export interface SoftwareSpecializationData {
      softwareIcon: string;
@@ -14,7 +15,6 @@ export interface SoftwareSpecializationData {
 
 export interface CertificationsData {
      certificationIcon: string;
-     certificationName: string;
 }
 
 const softwareSpecializationsData: SoftwareSpecializationData[] = [
@@ -41,8 +41,13 @@ const softwareSpecializationsData: SoftwareSpecializationData[] = [
 
 const certificationsData: CertificationsData[] = [
      {
-          certificationIcon: xero,
-          certificationName: 'Certification 1'
+          certificationIcon: xeroCertification
+     },
+     {
+          certificationIcon: qbCertification
+     },
+     {
+          certificationIcon: qbCertificationLevel1
      }
 ]
 
