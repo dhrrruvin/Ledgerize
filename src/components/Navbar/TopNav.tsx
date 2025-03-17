@@ -22,7 +22,7 @@ const TopNav = () => {
                                    <Link className="nav-link" to="/home/services">Services</Link>
                               </Nav.Item>
                               <Nav.Item>
-                                   <Link className="nav-link" to="/home/softwareSpecialization">Software Specialization</Link>
+                                   <Link className="nav-link" to="/home/specialization">Specialization</Link>
                               </Nav.Item>
                               <Nav.Item>
                                    <Link className="nav-link" to="/home/resources">Resources</Link>

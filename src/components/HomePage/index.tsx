@@ -45,7 +45,7 @@ const HomePage = () => {
                     servicesRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
                }, 300)
           }
-          else if (location.pathname === '/home/softwareSpecialization' && softwareSpecializationRef.current) {
+          else if (location.pathname === '/home/specialization' && softwareSpecializationRef.current) {
                id = setTimeout(() => {
                     softwareSpecializationRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
                }, 300)

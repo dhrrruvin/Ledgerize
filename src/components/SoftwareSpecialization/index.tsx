@@ -10,7 +10,7 @@ interface SoftwareSpecializationProps {
 }
 const SoftwareSpecialization = ({ softwareSpecializationsData, certificationData, ref }: SoftwareSpecializationProps) => {
      return (
-          <section ref={ref} id="softwareSpecialization" className="py-6 px-3">
+          <section ref={ref} id="specialization" className="py-6 px-3">
                <Container className="bg-soft-white border p-5 rounded-lg" data-aos="fade-up" data-aos-duration="700">
                     <Row className="align-items-center">
                          <Col lg={8}>
@@ -21,17 +21,22 @@ const SoftwareSpecialization = ({ softwareSpecializationsData, certificationData
                                              <li className="list-inline-item text-center" key={index.toString()}>
                                                   <span className="icon icon-sm text-secondary">
                                                        <img src={softwareSpecialization.softwareIcon} alt="" width={50} height={50} />
+                                                       {
+                                                            softwareSpecialization.certificationIcon ? (
+                                                                 <img src={softwareSpecialization.certificationIcon} alt="" width={50} height={50} style={{ marginLeft: '5px' }} />
+                                                            ) : ''
+                                                       }
                                                   </span>
                                                   <h6 className="mb-lg-0">{softwareSpecialization.softwareName}</h6>
                                              </li>
                                         );
                                    })}
                               </ul>
-                              <h4 className="display-5 fw-medium mb-2">Certifications</h4>
+                              {/* <h4 className="display-5 fw-medium mb-2">Certifications</h4>
                               <ul className="list-inline my-4">
                                    {certificationData.map((certification, index) => {
                                         return (
-                                             <li className="list-inline-item text-center" key={index.toString()}>
+                                             <li className="list-inline-item" key={index.toString()}>
                                                   <span className="icon icon-sm text-secondary">
                                                        <img src={certification.certificationIcon} alt="" width={50} height={50} />
                                                   </span>
@@ -39,7 +44,7 @@ const SoftwareSpecialization = ({ softwareSpecializationsData, certificationData
                                              </li>
                                         );
                                    })}
-                              </ul>
+                              </ul> */}
                          </Col>
                          <Col lg={4}>
                               <div className="text-lg-center mt-5 mt-lg-0">
