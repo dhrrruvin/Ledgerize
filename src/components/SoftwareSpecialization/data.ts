@@ -3,6 +3,7 @@ import qb from '../../assets/images/software/quickbook.png';
 import myob from '../../assets/images/software/myob.jpg';
 import dext from '../../assets/images/software/dext.jpg';
 import qbCertification from '../../assets/images/software/qb-certification.png';
+import xeroCertification from '../../assets/images/software/xero.png';
 
 export interface SoftwareSpecializationData {
      softwareIcon: string;
@@ -19,7 +20,8 @@ export interface CertificationsData {
 const softwareSpecializationsData: SoftwareSpecializationData[] = [
      {
           softwareIcon: xero,
-          softwareName: "Xero"
+          softwareName: "Xero",
+          certificationIcon: xeroCertification
      },
      {
           softwareIcon: qb,
