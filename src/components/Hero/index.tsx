@@ -19,13 +19,19 @@ const Hero = () => {
                               lg={{ offset: 1, span: 6 }}
                               md={6}
                               sm={12}
-                              data-aos="fade-left"
-                              data-aos-duration="2000"
+                              style={{ overflowX: 'hidden' }}
                          >
-                              <h1 className="hero-title text-center">
+                              <h1
+                                   data-aos="fade-left"
+                                   data-aos-duration="2000"
+                                   className="hero-title text-center">
                                    Accledgwise Bookkeeping LLP
                               </h1>
-                              <p className="hero-desc mt-3 fs-24 text-secondary" data-aos="fade-left" data-aos-duration="200">
+                              <p
+                                   data-aos="fade-left"
+                                   data-aos-duration="2000"
+                                   className="hero-desc mt-3 fs-24 text-secondary"
+                              >
                                    <i>
                                         "Your Trusted Offshore Partner for Professional Bookkeeping and Payroll Services"
                                    </i>
